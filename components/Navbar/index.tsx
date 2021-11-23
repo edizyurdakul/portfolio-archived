@@ -40,13 +40,13 @@ export default function Navbar() {
         <NavLink p={3} mr={2} to="/">
           Home
         </NavLink>
-        <NavLink p={3} mr={2} to="#" css={{ textDecoration: "line-through" }}>
+        <NavLink p={3} mr={2} to="#" css={{ cursor: "not-allowed", textDecoration: "line-through" }}>
           About
         </NavLink>
-        <NavLink p={3} mr={2} to="#" css={{ textDecoration: "line-through" }}>
+        <NavLink p={3} mr={2} to="#" css={{ cursor: "not-allowed", textDecoration: "line-through" }}>
           Projects
         </NavLink>
-        <NavLink p={3} to="#" css={{ textDecoration: "line-through" }}>
+        <NavLink p={3} to="#" css={{ cursor: "not-allowed", textDecoration: "line-through" }}>
           Contact
         </NavLink>
       </Box>
