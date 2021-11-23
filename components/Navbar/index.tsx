@@ -22,21 +22,9 @@ const Mobile = () => {
         <MenuItem>
           <NavLink to="/">Home</NavLink>
         </MenuItem>
-        <MenuItem>
-          <NavLink to="#" css={{ textDecoration: "line-through" }}>
-            About
-          </NavLink>
-        </MenuItem>
-        <MenuItem>
-          <NavLink to="#" css={{ textDecoration: "line-through" }}>
-            Projects
-          </NavLink>
-        </MenuItem>
-        <MenuItem>
-          <NavLink to="#" css={{ textDecoration: "line-through" }}>
-            Contact
-          </NavLink>
-        </MenuItem>
+        <MenuItem isDisabled>{/*<NavLink to="#">Contact</NavLink>*/}About</MenuItem>
+        <MenuItem isDisabled>{/*<NavLink to="#">Contact</NavLink>*/}Projects</MenuItem>
+        <MenuItem isDisabled>{/*<NavLink to="#">Contact</NavLink>*/}Contact</MenuItem>
       </MenuList>
     </Menu>
   );
