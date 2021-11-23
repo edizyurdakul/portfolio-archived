@@ -1,3 +1,11 @@
+import Head from "next/head";
+
 export default function HomePage() {
-  return <div>Hello World!</div>;
+  return (
+    <>
+      <Head>
+        <title>Ediz Yurdakul &nbsp;–&nbsp; Frontend Web Developer</title>
+      </Head>
+    </>
+  );
 }
