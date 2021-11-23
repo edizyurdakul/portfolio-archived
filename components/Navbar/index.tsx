@@ -23,13 +23,19 @@ const Mobile = () => {
           <NavLink to="/">Home</NavLink>
         </MenuItem>
         <MenuItem>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="#" css={{ textDecoration: "line-through" }}>
+            About
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <NavLink to="/projects">Projects</NavLink>
+          <NavLink to="#" css={{ textDecoration: "line-through" }}>
+            Projects
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="#" css={{ textDecoration: "line-through" }}>
+            Contact
+          </NavLink>
         </MenuItem>
       </MenuList>
     </Menu>
@@ -46,13 +52,13 @@ export default function Navbar() {
         <NavLink p={3} mr={2} to="/">
           Home
         </NavLink>
-        <NavLink p={3} mr={2} to="/about">
+        <NavLink p={3} mr={2} to="#" css={{ textDecoration: "line-through" }}>
           About
         </NavLink>
-        <NavLink p={3} mr={2} to="/projects">
+        <NavLink p={3} mr={2} to="#" css={{ textDecoration: "line-through" }}>
           Projects
         </NavLink>
-        <NavLink p={3} to="/contact">
+        <NavLink p={3} to="#" css={{ textDecoration: "line-through" }}>
           Contact
         </NavLink>
       </Box>
@@ -61,7 +67,7 @@ export default function Navbar() {
   );
 }
 
-// Amazing implementation by Kenneth Mark
+// Amazing Chakra UI and NextLink implementation by Kenneth Mark
 // Source: https://dev.to/kennymark/implementing-activelink-in-next-js-and-chakra-44ki
 
 interface NavLinkProps extends LinkProps {
@@ -84,7 +90,7 @@ function NavLink({ to, activeProps, children, _hover, ...props }: NavLinkProps) 
           {...props}
           {...activeProps}
           _hover={{
-            bg: useColorModeValue("gray.100", "rgba(255, 255, 255, 0.08)"),
+            bg: useColorModeValue("gray.100", "whiteAlpha.200"),
             color: useColorModeValue("black", "white"),
             rounded: "md",
           }}
