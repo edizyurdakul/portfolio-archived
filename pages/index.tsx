@@ -78,7 +78,7 @@ export default function HomePage() {
           alt="Ediz Yurdakul"
         />
       </Box>
-      <Box as="section" mt={{ base: "12", sm: "16", md: "24" }}>
+      <Box as="section" mt={{ base: "12", sm: "16", md: "16" }}>
         <Heading as="h2" fontSize="2xl" mb={8}>
           About Me
         </Heading>
@@ -88,7 +88,7 @@ export default function HomePage() {
           taught me a lot about HTML & CSS!
         </Text>
       </Box>
-      <Box as="section" mt={{ base: "12", sm: "16", md: "24" }}>
+      <Box as="section" mt={{ base: "12", sm: "16", md: "16" }}>
         <Heading as="h2" fontSize="2xl" mb={8}>
           Projects
         </Heading>
@@ -99,7 +99,8 @@ export default function HomePage() {
           rounded="md"
           borderWidth="1px"
           borderColor={useColorModeValue("gray.200", "gray.600")}
-          _hover={{ transform: "scale(1.01)", transition: "all ease-in 0.1s" }}
+          css={{ transition: "all ease-in-out 0.15s" }}
+          _hover={{ transform: `${" translateY(-2px)"} ${"scale(1.005)"}` }}
         >
           <VStack align="stretch">
             <Box>
