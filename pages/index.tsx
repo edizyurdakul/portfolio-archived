@@ -58,12 +58,15 @@ export default function HomePage() {
         flexDirection={{ base: "column-reverse", sm: "row", md: "row" }}
       >
         <Box display="flex" flexDirection="column" justifyContent="center" pr={{ base: "1", sm: "6", md: "6" }}>
-          <Heading mb={5} as="h1">
-            Ediz Yurdakul
+          <Heading lineHeight="0.5" mb={5} as="h1">
+            Ediz Yurdakul &nbsp;
+            <br />
+            <br />
+            <Box as="span" fontSize="md" color={useColorModeValue("gray.600", "gray.400")}>
+              I’m a front-end developer specializing in building (and occasionally designing) exceptional digital experiences.
+            </Box>
           </Heading>
-          <Text as="p" color={useColorModeValue("gray.600", "gray.400")}>
-            I’m a front-end developer specializing in building (and occasionally designing) exceptional digital experiences.
-          </Text>
+
           <NextLink href="/resume.pdf">
             <Button isDisabled mt={5} w="fit-content" size="md">
               Resume
@@ -97,13 +100,11 @@ export default function HomePage() {
           p={4}
           bg={useColorModeValue("gray.100", "whiteAlpha.100")}
           rounded="md"
-          borderWidth="1px"
-          borderColor={useColorModeValue("gray.200", "gray.600")}
           css={{ transition: "all ease-in-out 0.15s" }}
           _hover={{ transform: `${" translateY(-2px)"} ${"scale(1.005)"}` }}
         >
           <VStack align="stretch">
-            <Box>
+            <Box p={2}>
               <Heading as="h3" fontSize="xl">
                 Hamshack Radio
               </Heading>

@@ -17,7 +17,7 @@ export default function MyApp({ Component, pageProps }) {
         <meta name="twitter:site" content="@edizyurdakul" />
         <meta name="twitter:creator" content="@edizyurdakul" />
         <meta name="twitter:image" content="/card.png" />
-        <meta property="og:site_name" content="Takuya Matsuyama's Homepage" />
+        <meta property="og:site_name" content="Ediz Yurdakul - A front end web develope" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/card.png" />
       </Head>{" "}
