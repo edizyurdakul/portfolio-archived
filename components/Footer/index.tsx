@@ -24,7 +24,7 @@ export default function Footer() {
             Ediz Yurdakul
           </Text>
         </VStack>
-        <VStack>
+        <VStack alignItems="flex-start">
           <NavLink p={3} to="/">
             Home
           </NavLink>
