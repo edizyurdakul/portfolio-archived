@@ -25,7 +25,7 @@ export default function Footer() {
           </Text>
         </VStack>
         <VStack alignItems="flex-start">
-          <NavLink p={3} to="/">
+          <NavLink mt={{ base: "2", sm: "2", md: "0" }} p={3} to="/">
             Home
           </NavLink>
           <NavLink p={3} to="#" css={{ cursor: "not-allowed" }}>
@@ -38,8 +38,8 @@ export default function Footer() {
             Contact
           </NavLink>
         </VStack>
-        <VStack alignItems="flex-start" mt={{ base: "4", sm: "4", md: "0" }}>
-          <NavLink p={3} to="/">
+        <VStack alignItems="flex-start">
+          <NavLink mt={{ base: "2", sm: "2", md: "0" }} p={3} to="/">
             Github
           </NavLink>
           <NavLink p={3} to="#">
