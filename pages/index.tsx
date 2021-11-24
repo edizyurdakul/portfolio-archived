@@ -62,7 +62,7 @@ export default function HomePage() {
             Ediz Yurdakul &nbsp;
             <br />
             <br />
-            <Box as="span" fontSize="md" color={useColorModeValue("gray.600", "gray.400")}>
+            <Box fontWeight="normal" as="span" fontSize="md" color={useColorModeValue("gray.600", "gray.400")}>
               I’m a front-end developer specializing in building (and occasionally designing) exceptional digital experiences.
             </Box>
           </Heading>
