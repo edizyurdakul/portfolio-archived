@@ -28,13 +28,13 @@ export default function Footer() {
           <NavLink p={3} to="/">
             Home
           </NavLink>
-          <NavLink p={3} to="#" css={{ cursor: "not-allowed", textDecoration: "line-through" }}>
+          <NavLink p={3} to="#" css={{ cursor: "not-allowed" }}>
             About
           </NavLink>
-          <NavLink p={3} to="#" css={{ cursor: "not-allowed", textDecoration: "line-through" }}>
+          <NavLink p={3} to="#" css={{ cursor: "not-allowed" }}>
             Projects
           </NavLink>
-          <NavLink p={3} to="#" css={{ cursor: "not-allowed", textDecoration: "line-through" }}>
+          <NavLink p={3} to="#" css={{ cursor: "not-allowed" }}>
             Contact
           </NavLink>
         </VStack>
