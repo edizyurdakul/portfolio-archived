@@ -8,7 +8,7 @@ export default function Footer() {
       <HStack
         flexDirection={{ base: "column", md: "row" }}
         alignItems="flex-start"
-        justifyContent=" space-between"
+        justifyContent="flex-start"
         color={useColorModeValue("gray.500", "gray.500")}
       >
         <VStack ml={{ base: "2", sm: "2", md: "0" }} mr={{ base: "0", sm: "0", md: "24" }} alignItems="flex-start">
