@@ -11,20 +11,7 @@ export default function Footer() {
         justifyContent=" space-between"
         color={useColorModeValue("gray.500", "gray.500")}
       >
-        <VStack css={{ marginInlineStart: "0.5rem" }}>
-          <Text
-            p={3}
-            _hover={{
-              bg: useColorModeValue("gray.100", "whiteAlpha.200"),
-              color: useColorModeValue("black", "white"),
-              rounded: "md",
-            }}
-            css={{ transition: "all 0.15s ease-in-out" }}
-          >
-            Ediz Yurdakul
-          </Text>
-        </VStack>
-        <VStack alignItems="flex-start">
+        <VStack ml={{ base: "2", sm: "2", md: "0" }} mr={{ base: "0", sm: "0", md: "24" }} alignItems="flex-start">
           <NavLink mt={{ base: "2", sm: "2", md: "0" }} p={3} to="/">
             Home
           </NavLink>
