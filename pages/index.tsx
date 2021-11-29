@@ -104,7 +104,7 @@ export default function HomePage({ posts }) {
       </Box>
       <Box as="section" mt={{ base: "12", sm: "16", md: "16" }}>
         <Heading as="h2" fontSize="2xl" mb={8}>
-          Projects
+          Featured Posts
         </Heading>
         <HStack
           alignItems="flex-start"
@@ -112,7 +112,7 @@ export default function HomePage({ posts }) {
           bg={useColorModeValue("gray.100", "whiteAlpha.100")}
           rounded="md"
           css={{ transition: "all ease-in-out 0.15s" }}
-          _hover={{ transform: `${" translateY(-2px)"} ${"scale(1.005)"}`, boxShadow: "0 0 11px rgba(33,33,33,.2); " }}
+          _hover={{ transform: `${" translateY(-2px)"} ${"scale(1.005)"}`, shadow: "lg" }}
         >
           <VStack align="stretch">
             <Box p={2}>
@@ -167,7 +167,7 @@ export default function HomePage({ posts }) {
           css={{ transition: "all ease-in-out 0.15s" }}
           _hover={{
             transform: `${" translateY(-2px)"} ${"scale(1.005)"}`,
-            boxShadow: "0 0 11px rgba(33,33,33,.2); ",
+            shadow: "lg",
           }}
         >
           <VStack align="stretch">
@@ -221,7 +221,7 @@ export default function HomePage({ posts }) {
           css={{ transition: "all ease-in-out 0.15s" }}
           _hover={{
             transform: `${" translateY(-2px)"} ${"scale(1.005)"}`,
-            boxShadow: "0 0 11px rgba(33,33,33,.2); ",
+            shadow: "lg",
           }}
         >
           <VStack align="stretch">
@@ -374,7 +374,7 @@ export default function HomePage({ posts }) {
                   css={{ transition: "all ease-in-out 0.15s" }}
                   _hover={{
                     transform: `${" translateY(-2px)"} ${"scale(1.005)"}`,
-                    boxShadow: "0 0 11px rgba(33,33,33,.2); ",
+                    shadow: "lg",
                   }}
                 >
                   <NextLink as={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`} href={`/blog/[slug]`} passHref>

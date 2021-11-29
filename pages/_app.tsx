@@ -11,6 +11,8 @@ export default function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Ediz Yurdakul - A front end web developer" />
         <meta name="author" content="Ediz Yurdakul" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1A202C" />
+
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -20,7 +22,7 @@ export default function MyApp({ Component, pageProps }) {
         <meta property="og:site_name" content="Ediz Yurdakul - A front end web develope" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/card.png" />
-      </Head>{" "}
+      </Head>
       <Chakra cookies={pageProps.cookies}>
         <ChakraProvider theme={theme}>
           <Layout>

@@ -72,7 +72,7 @@ function NavLink({ to, activeProps, children, _hover, ...props }: NavLinkProps) 
 
   if (isActive) {
     return (
-      <Link href={to}>
+      <Link href={to} passHref>
         <ChakraLink
           fontWeight="600"
           {...props}
@@ -90,7 +90,7 @@ function NavLink({ to, activeProps, children, _hover, ...props }: NavLinkProps) 
   }
 
   return (
-    <Link href={to}>
+    <Link href={to} passHref>
       <ChakraLink
         {...props}
         _hover={{
