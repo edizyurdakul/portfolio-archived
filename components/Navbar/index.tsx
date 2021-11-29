@@ -19,9 +19,9 @@ const Mobile = () => {
     <Menu>
       <MenuButton as={IconButton} icon={<HamburgerIcon />} aria-label="Open Menu"></MenuButton>
       <MenuList css={{ paddingTop: "0", paddingBottom: "0" }}>
-        <MenuItem>
-          <NavLink to="/">Home</NavLink>
-        </MenuItem>
+        <NavLink to="/">
+          <MenuItem>Home</MenuItem>{" "}
+        </NavLink>
         <MenuItem isDisabled>{/*<NavLink to="#">Contact</NavLink>*/}About</MenuItem>
         <MenuItem isDisabled>{/*<NavLink to="#">Contact</NavLink>*/}Projects</MenuItem>
         <MenuItem isDisabled>{/*<NavLink to="#">Contact</NavLink>*/}Contact</MenuItem>
