@@ -1,22 +1,32 @@
 import Head from "next/head";
+import NextImage from "next/image";
+import NextLink from "next/link";
+import fs from "fs";
+import matter from "gray-matter";
+import path from "path";
+import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
 import {
   Box,
   VStack,
   HStack,
+  Grid,
+  GridItem,
   Link,
+  LinkBox,
+  LinkOverlay,
   IconButton,
   Tooltip,
   Image,
   Button,
   Heading,
   Text,
+  List,
+  ListItem,
   Badge,
   useColorModeValue,
 } from "@chakra-ui/react";
-import NextImage from "next/image";
-import NextLink from "next/link";
 
-export default function HomePage() {
+export default function HomePage({ posts }) {
   const OpenIconLight = () => {
     return (
       <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="#FFF">
@@ -248,7 +258,7 @@ export default function HomePage() {
                       aria-label="Open github repo"
                       colorScheme={"gray"}
                       icon={useColorModeValue(<GithubIcon />, <GithubIcon />)}
-                    ></IconButton>{" "}
+                    ></IconButton>
                   </Link>
                 </Tooltip>
               </HStack>
@@ -256,7 +266,160 @@ export default function HomePage() {
           </VStack>
         </HStack>
       </Box>
-      <Box mt={{ base: "12", sm: "16", md: "24" }}></Box>
+      <Box as="section" mt={{ base: "12", sm: "16", md: "24" }}>
+        <Heading as="h2" fontSize="2xl" mb={8}>
+          Experience
+        </Heading>
+        <Box>
+          <HStack justifyContent="space-between">
+            <Heading as="h3" fontSize="md">
+              Dado Agency
+            </Heading>
+            <Text as="p">March 2019 - December 2019</Text>
+          </HStack>
+          <Text as="p" color={useColorModeValue("gray", "gray")} fontSize="sm">
+            Web Developer
+          </Text>
+        </Box>
+      </Box>
+      <Box as="section" mt={{ base: "12", sm: "16", md: "24" }}>
+        <Heading as="h2" fontSize="2xl" mb={8}>
+          Skills
+        </Heading>
+        <Grid templateColumns={{ base: "repeat(1,1fr)", sm: "repeat(2,1fr)", md: "repeat(4, 1fr)" }} gap={{ base: "6" }}>
+          <VStack alignItems="flex-start">
+            <Heading as="h3" fontSize="xl">
+              Languages
+            </Heading>
+            <List>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={4}>
+                JavaScript (ES6)
+              </ListItem>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
+                TypeScript
+              </ListItem>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
+                HTML
+              </ListItem>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
+                CSS/Sass
+              </ListItem>
+            </List>
+          </VStack>
+          <VStack alignItems="flex-start">
+            <Heading as="h3" fontSize="xl">
+              Frameworks
+            </Heading>
+            <List>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={4}>
+                React
+              </ListItem>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
+                NextJS
+              </ListItem>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
+                GatsbyJS
+              </ListItem>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
+                Vue
+              </ListItem>
+            </List>
+          </VStack>
+          <VStack alignItems="flex-start">
+            <Heading as="h3" fontSize="xl">
+              Tools
+            </Heading>
+            <List>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={4}>
+                Bash
+              </ListItem>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
+                Git & Github
+              </ListItem>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
+                Chrome Devtools
+              </ListItem>
+            </List>
+          </VStack>
+          <VStack alignItems="flex-start">
+            <Heading as="h3" fontSize="xl">
+              Design
+            </Heading>
+            <List>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={4}>
+                Figma
+              </ListItem>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
+                Adobe XD
+              </ListItem>
+            </List>
+          </VStack>
+        </Grid>
+      </Box>
+      <Box as="section" mt={{ base: "12", sm: "16", md: "24" }}>
+        <Heading as="h2" fontSize="2xl" mb={8}>
+          Featured Posts
+        </Heading>
+        <List>
+          {posts.map((post) => (
+            <ListItem key={post.filePath}>
+              <LinkBox as="article">
+                <VStack
+                  alignItems="flex-start"
+                  p={4}
+                  mt={4}
+                  bg={useColorModeValue("gray.100", "whiteAlpha.100")}
+                  rounded="md"
+                  css={{ transition: "all ease-in-out 0.15s" }}
+                  _hover={{
+                    transform: `${" translateY(-2px)"} ${"scale(1.005)"}`,
+                    boxShadow: "0 0 11px rgba(33,33,33,.2); ",
+                  }}
+                >
+                  <NextLink as={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`} href={`/blog/[slug]`} passHref>
+                    <LinkOverlay>
+                      <Heading
+                        _hover={{
+                          color: useColorModeValue("black", "white"),
+                          rounded: "md",
+                        }}
+                        as="h3"
+                        fontSize="xl"
+                      >
+                        {post.data.title}
+                      </Heading>
+                    </LinkOverlay>
+                  </NextLink>
+                  <Text color={useColorModeValue("gray", "gray")} noOfLines={2} fontSize="md" as="p">
+                    {post.data.description}
+                  </Text>
+                </VStack>
+              </LinkBox>
+            </ListItem>
+          ))}
+        </List>
+      </Box>
     </>
   );
+}
+
+/**
+ <NextLink as={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`} href={`/blog/[slug]`}>
+                <a>{post.data.title}</a>
+              </NextLink>
+ */
+
+export function getStaticProps() {
+  const posts = postFilePaths.map((filePath) => {
+    const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
+    const { content, data } = matter(source);
+
+    return {
+      content,
+      data,
+      filePath,
+    };
+  });
+
+  return { props: { posts } };
 }

@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { Box, Text, Link as ChakraLink, LinkProps, VStack, HStack, useColorModeValue } from "@chakra-ui/react";
+import { Box, Link as ChakraLink, LinkProps, VStack, HStack, useColorModeValue } from "@chakra-ui/react";
 
 export default function Footer() {
   return (
@@ -26,13 +25,13 @@ export default function Footer() {
           </NavLink>
         </VStack>
         <VStack alignItems="flex-start">
-          <NavLink mt={{ base: "2", sm: "2", md: "0" }} p={3} to="/">
+          <NavLink isExternal mt={{ base: "2", sm: "2", md: "0" }} p={3} to="https://github.com/edizyurdakul">
             Github
           </NavLink>
           <NavLink p={3} to="#">
             Twitter
           </NavLink>
-          <NavLink p={3} to="#">
+          <NavLink isExternal p={3} to="https://www.linkedin.com/in/edizyurdakul/">
             LinkedIn
           </NavLink>
         </VStack>
@@ -49,30 +48,8 @@ interface NavLinkProps extends LinkProps {
 }
 
 function NavLink({ to, activeProps, children, _hover, ...props }: NavLinkProps) {
-  const router = useRouter();
-  const isActive = router.pathname === to;
-  const color = useColorModeValue("black", "white");
-
-  if (isActive) {
-    return (
-      <Link href={to}>
-        <ChakraLink
-          {...props}
-          {...activeProps}
-          _hover={{
-            bg: useColorModeValue("gray.100", "whiteAlpha.200"),
-            color: useColorModeValue("black", "white"),
-            rounded: "md",
-          }}
-        >
-          {children}
-        </ChakraLink>
-      </Link>
-    );
-  }
-
   return (
-    <Link href={to}>
+    <Link href={to} passHref>
       <ChakraLink
         {...props}
         _hover={{
