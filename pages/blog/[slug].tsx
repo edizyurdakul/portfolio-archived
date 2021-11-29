@@ -16,6 +16,7 @@ import Layout, { WEBSITE_HOST_URL } from "../../components/Blog/Layout";
 import { MetaProps } from "../../types/postLayout";
 import { PostType } from "../../types/post";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
+import { Heading, Box, Text, useColorModeValue } from "@chakra-ui/react";
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -25,6 +26,8 @@ const components = {
   Head,
   Image,
   Link,
+  Heading,
+  Text,
 };
 
 type PostPageProps = {
@@ -34,7 +37,7 @@ type PostPageProps = {
 
 const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
   const customMeta: MetaProps = {
-    title: `${frontMatter.title} - Hunter Chang`,
+    title: `${frontMatter.title} - Ediz Yurdakul`,
     description: frontMatter.description,
     image: `${WEBSITE_HOST_URL}${frontMatter.image}`,
     date: frontMatter.date,
@@ -42,13 +45,15 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
   };
   return (
     <Layout customMeta={customMeta}>
-      <article>
-        <h1>{frontMatter.title}</h1>
-        <p>{format(parseISO(frontMatter.date), "MMMM dd, yyyy")}</p>
+      <Box as="article" mt={20}>
+        <Heading as="h1">{frontMatter.title}</Heading>
+        <Text as="p" color={useColorModeValue("gray.500", "gray.500")}>
+          {format(parseISO(frontMatter.date), "MMMM dd, yyyy")}
+        </Text>
         <div>
           <MDXRemote {...source} components={components} />
         </div>
-      </article>
+      </Box>
     </Layout>
   );
 };

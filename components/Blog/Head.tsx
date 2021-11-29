@@ -7,8 +7,8 @@ export const WEBSITE_HOST_URL = "http://localhost:3000";
 const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
   const router = useRouter();
   const meta: MetaProps = {
-    title: "Hunter Chang - Website",
-    description: "Sleep Deprived Father. Senior Web Developer. Lover of all things Ramen and Kpop.",
+    title: "Ediz Yurdakul - Frontend Developer",
+    description: " Frontend Web Developer.  ",
     image: `${WEBSITE_HOST_URL}/images/site-preview.png`,
     type: "website",
     ...customMeta,

@@ -61,6 +61,7 @@ export default function HomePage({ posts }) {
       <Head>
         <title>Ediz Yurdakul &nbsp;–&nbsp; Frontend Web Developer</title>
       </Head>
+
       <Box
         as="section"
         mt={{ base: "12", sm: "16", md: "24" }}
