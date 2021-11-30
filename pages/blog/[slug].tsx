@@ -26,8 +26,26 @@ const components = {
   Head,
   Image,
   Link,
-  Heading,
-  Text,
+  h1: (props) => (
+    <Heading fontSize="3xl" mb={4} mt={8} as="h1">
+      {props.children}
+    </Heading>
+  ),
+  h2: (props) => (
+    <Heading fontSize="2xl" mb={4} mt={8} as="h1">
+      {props.children}{" "}
+    </Heading>
+  ),
+  h3: (props) => (
+    <Heading fontSize="xl" mb={4} mt={8} as="h1">
+      {props.children}
+    </Heading>
+  ),
+  p: (props) => (
+    <Text fontSize="xl" as="p">
+      {props.children}
+    </Text>
+  ),
 };
 
 type PostPageProps = {
