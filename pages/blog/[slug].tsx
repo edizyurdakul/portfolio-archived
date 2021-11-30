@@ -42,7 +42,7 @@ const components = {
     </Heading>
   ),
   p: (props) => (
-    <Text fontSize="xl" as="p">
+    <Text fontSize="md" mb={4} mt={4} as="p">
       {props.children}
     </Text>
   ),
