@@ -20,9 +20,11 @@ const Mobile = () => {
       <MenuButton as={IconButton} icon={<HamburgerIcon />} aria-label="Open Menu"></MenuButton>
       <MenuList css={{ paddingTop: "0", paddingBottom: "0" }}>
         <NavLink to="/">
-          <MenuItem>Home</MenuItem>{" "}
+          <MenuItem>Home</MenuItem>
         </NavLink>
-        <MenuItem isDisabled>{/*<NavLink to="#">Contact</NavLink>*/}About</MenuItem>
+        <MenuItem>
+          <NavLink to="/about">About</NavLink>
+        </MenuItem>
         <MenuItem isDisabled>{/*<NavLink to="#">Contact</NavLink>*/}Projects</MenuItem>
         <MenuItem isDisabled>{/*<NavLink to="#">Contact</NavLink>*/}Contact</MenuItem>
       </MenuList>
@@ -40,7 +42,7 @@ export default function Navbar() {
         <NavLink p={3} mr={2} to="/">
           Home
         </NavLink>
-        <NavLink p={3} mr={2} to="#" css={{ cursor: "not-allowed", textDecoration: "line-through" }}>
+        <NavLink p={3} mr={2} to="/about">
           About
         </NavLink>
         <NavLink p={3} mr={2} to="#" css={{ cursor: "not-allowed", textDecoration: "line-through" }}>

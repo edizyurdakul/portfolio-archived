@@ -9,7 +9,6 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Ediz Yurdakul - A front end web developer" />
         <meta name="author" content="Ediz Yurdakul" />
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1A202C" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />

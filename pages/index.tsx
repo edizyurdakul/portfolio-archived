@@ -60,23 +60,17 @@ export default function HomePage({ posts }) {
     <>
       <Head>
         <title>Ediz Yurdakul &nbsp;–&nbsp; Frontend Web Developer</title>
+        <meta name="description" content="My personal portfolio website, built with NextJS, Chakra-UI, Typescript, MDX" />
       </Head>
 
-      <Box
-        as="section"
-        mt={{ base: "12", sm: "16", md: "24" }}
-        display="flex"
-        flexDirection={{ base: "column-reverse", sm: "row", md: "row" }}
-      >
+      <Box as="section" display="flex" flexDirection={{ base: "column-reverse", sm: "row", md: "row" }}>
         <Box display="flex" flexDirection="column" justifyContent="center" pr={{ base: "1", sm: "6", md: "6" }}>
-          <Heading lineHeight="0.5" mb={5} as="h1">
-            Ediz Yurdakul &nbsp;
-            <br />
-            <br />
-            <Box fontWeight="normal" as="span" fontSize="md" color={useColorModeValue("gray.600", "gray.400")}>
-              I’m a front-end developer specializing in building (and occasionally designing) exceptional digital experiences.
-            </Box>
+          <Heading mb={5} as="h1">
+            Ediz Yurdakul
           </Heading>
+          <Box fontWeight="normal" as="span" fontSize="md" color={useColorModeValue("gray.600", "gray.400")}>
+            I’m a front-end developer specializing in building (and occasionally designing) outstanding digital products.
+          </Box>
 
           <NextLink href="/resume.pdf">
             <Button isDisabled mt={5} w="fit-content" size="md">
@@ -97,9 +91,8 @@ export default function HomePage({ posts }) {
           About Me
         </Heading>
         <Text color={useColorModeValue("gray.600", "gray.400")} as="p">
-          Hello! My name is Ediz and I enjoy creating things that live on the internet. My interest in web development started
-          back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button
-          taught me a lot about HTML & CSS!
+          Hello! My name is Ediz and I enjoy building things for the web. Currently improving and learning NextJS, Chakra-UI,
+          Typescript, Prisma, GraphQL, and Apollo 3.
         </Text>
       </Box>
       <Box as="section" mt={{ base: "12", sm: "16", md: "16" }}>
