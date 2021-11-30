@@ -104,7 +104,7 @@ export default function HomePage({ posts }) {
       </Box>
       <Box as="section" mt={{ base: "12", sm: "16", md: "16" }}>
         <Heading as="h2" fontSize="2xl" mb={8}>
-          Featured Posts
+          Featured Projects
         </Heading>
         <HStack
           alignItems="flex-start"
