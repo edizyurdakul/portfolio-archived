@@ -205,60 +205,6 @@ export default function HomePage({ posts }) {
             </Box>
           </VStack>
         </HStack>
-        <HStack
-          alignItems="flex-start"
-          p={4}
-          mt={4}
-          bg={useColorModeValue("gray.100", "whiteAlpha.100")}
-          rounded="md"
-          css={{ transition: "all ease-in-out 0.15s" }}
-          _hover={{
-            transform: `${" translateY(-2px)"} ${"scale(1.005)"}`,
-            shadow: "lg",
-          }}
-        >
-          <VStack align="stretch">
-            <Box p={2}>
-              <Heading as="h3" fontSize="xl">
-                Consermul S.A
-              </Heading>
-              <HStack css={{ marginLeft: "0" }} mt={4}>
-                <Badge p={1} rounded="md" colorScheme="teal">
-                  NextJS
-                </Badge>
-                <Badge p={1} rounded="md" colorScheme="pink">
-                  SASS
-                </Badge>
-                <Badge p={1} rounded="md" colorScheme="red">
-                  REACT
-                </Badge>
-              </HStack>
-              <Text color={useColorModeValue("gray.600", "gray.400")} mt={4}>
-                Consermul S.A, is a consulting, maintenance and construction company based in Panama
-              </Text>
-              <HStack mt={6}>
-                <Tooltip label="Open live website">
-                  <Link target="_blank" href="https://consermulsa.com">
-                    <IconButton
-                      aria-label="Open live website"
-                      colorScheme={"gray"}
-                      icon={useColorModeValue(<OpenIconDark />, <OpenIconLight />)}
-                    ></IconButton>
-                  </Link>
-                </Tooltip>
-                <Tooltip label="Open github repository">
-                  <Link target="_blank" href="https://github.com/edizyurdakul/ConsermulSA">
-                    <IconButton
-                      aria-label="Open github repo"
-                      colorScheme={"gray"}
-                      icon={useColorModeValue(<GithubIcon />, <GithubIcon />)}
-                    ></IconButton>
-                  </Link>
-                </Tooltip>
-              </HStack>
-            </Box>
-          </VStack>
-        </HStack>
       </Box>
       <Box as="section" mt={{ base: "12", sm: "16", md: "24" }}>
         <Heading as="h2" fontSize="2xl" mb={8}>
