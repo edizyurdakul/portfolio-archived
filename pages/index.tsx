@@ -184,7 +184,7 @@ export default function HomePage({ posts }) {
               </Text>
               <HStack mt={6}>
                 <Tooltip label="Open live website">
-                  <Link target="_blank" href="https://consermulsa.com">
+                  <Link target="_blank" href="http://consermulsa.vercel.app/">
                     <IconButton
                       aria-label="Open live website"
                       colorScheme={"gray"}
