@@ -13,8 +13,8 @@ export default function AboutPage() {
           About Me
         </Heading>
         <Text color={useColorModeValue("gray.600", "gray.400")} mt={4} as="p">
-          My name is Ediz. Born in Durban, South Africa. My parent are from Turkey so ocassionaly I travel to Turkey and Cape
-          Town back an forth. On the look for improving and developing my frontend skills.
+          My name is Ediz. Born in Durban, South Africa. My parents are from Turkey and South Africa, so I occasionally travel 
+          to Turkey and Cape Town and back. I am looking to improve and develop my front end skills.
         </Text>
         <Text color={useColorModeValue("gray.600", "gray.400")} mt={4} as="p">
           Currently studying at Varsity College Cape Town, although looking for opportunities to grow.
