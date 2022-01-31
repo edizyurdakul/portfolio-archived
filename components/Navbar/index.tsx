@@ -11,13 +11,18 @@ import {
   Link as ChakraLink,
   LinkProps,
   useColorModeValue,
+  VisuallyHidden,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
 const Mobile = () => {
   return (
     <Menu>
-      <MenuButton as={IconButton} icon={<HamburgerIcon />} aria-label="Open Menu"></MenuButton>
+      <MenuButton
+        as={IconButton}
+        icon={<HamburgerIcon />}
+        aria-label="Open Menu"
+      ></MenuButton>
       <MenuList css={{ paddingTop: "0", paddingBottom: "0" }}>
         <NavLink to="/">
           <MenuItem>Home</MenuItem>
@@ -25,8 +30,12 @@ const Mobile = () => {
         <MenuItem>
           <NavLink to="/about">About</NavLink>
         </MenuItem>
-        <MenuItem isDisabled>{/*<NavLink to="#">Contact</NavLink>*/}Projects</MenuItem>
-        <MenuItem isDisabled>{/*<NavLink to="#">Contact</NavLink>*/}Contact</MenuItem>
+        <MenuItem isDisabled>
+          {/*<NavLink to="#">Contact</NavLink>*/}Projects
+        </MenuItem>
+        <MenuItem isDisabled>
+          {/*<NavLink to="#">Contact</NavLink>*/}Contact
+        </MenuItem>
       </MenuList>
     </Menu>
   );
@@ -34,7 +43,13 @@ const Mobile = () => {
 
 export default function Navbar() {
   return (
-    <Box as="header" mt={6} display="flex" alignItems="center" justifyContent="space-between">
+    <Box
+      as="header"
+      mt={6}
+      display="flex"
+      alignItems="center"
+      justifyContent="space-between"
+    >
       <Box as="nav" display={{ base: "block", sm: "block", md: `none` }}>
         <Mobile />
       </Box>
@@ -45,10 +60,19 @@ export default function Navbar() {
         <NavLink p={3} mr={2} to="/about">
           About
         </NavLink>
-        <NavLink p={3} mr={2} to="#" css={{ cursor: "not-allowed", textDecoration: "line-through" }}>
+        <NavLink
+          p={3}
+          mr={2}
+          to="#"
+          css={{ cursor: "not-allowed", textDecoration: "line-through" }}
+        >
           Projects
         </NavLink>
-        <NavLink p={3} to="#" css={{ cursor: "not-allowed", textDecoration: "line-through" }}>
+        <NavLink
+          p={3}
+          to="#"
+          css={{ cursor: "not-allowed", textDecoration: "line-through" }}
+        >
           Contact
         </NavLink>
       </Box>
@@ -67,7 +91,13 @@ interface NavLinkProps extends LinkProps {
   _hover?: LinkProps;
 }
 
-function NavLink({ to, activeProps, children, _hover, ...props }: NavLinkProps) {
+function NavLink({
+  to,
+  activeProps,
+  children,
+  _hover,
+  ...props
+}: NavLinkProps) {
   const router = useRouter();
   const isActive = router.pathname === to;
   const color = useColorModeValue("black", "white");
