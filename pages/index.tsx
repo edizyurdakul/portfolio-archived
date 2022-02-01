@@ -184,10 +184,7 @@ export default function HomePage({ posts }) {
                   <IconButton
                     css={{ cursor: "not-allowed" }}
                     aria-label="Open github repo"
-                    bg={useColorModeValue("gray.200", "whiteAlpha.200")}
-                    _hover={{
-                      bg: `${useColorModeValue("gray.300", "gray.100")}`,
-                    }}
+                    colorScheme={"gray"}
                     icon={useColorModeValue(<GithubIcon />, <GithubIcon />)}
                   ></IconButton>
                 </Tooltip>
