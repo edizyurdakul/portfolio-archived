@@ -229,7 +229,7 @@ export default function HomePage({ posts }) {
               </Text>
               <HStack mt={6}>
                 <Tooltip label="Open live website">
-                  <Link target="_blank" href="http://consermulsa.vercel.app/">
+                  <Link target="_blank" href="http://consermulsa.com/">
                     <IconButton
                       aria-label="Open live website"
                       colorScheme={"gray"}
