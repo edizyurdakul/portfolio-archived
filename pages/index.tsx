@@ -1,5 +1,4 @@
 import Head from "next/head";
-import NextImage from "next/image";
 import NextLink from "next/link";
 import fs from "fs";
 import matter from "gray-matter";
@@ -10,10 +9,7 @@ import {
   VStack,
   HStack,
   Grid,
-  GridItem,
   Link,
-  Flex,
-  LinkOverlay,
   IconButton,
   Tooltip,
   Image,
@@ -23,7 +19,6 @@ import {
   List,
   ListItem,
   Badge,
-  chakra,
   useColorModeValue,
 } from "@chakra-ui/react";
 
@@ -123,7 +118,7 @@ export default function HomePage({ posts }) {
         <Text color={useColorModeValue("gray.600", "gray.400")} as="p">
           Hello! My name is Ediz and I enjoy building things for the web.
           Currently improving and learning NextJS, Chakra-UI, Typescript,
-          Prisma, GraphQL, and Apollo 3.
+          Prisma, Fauna, GraphQL, and Apollo 3.
         </Text>
       </Box>
       <Box as="section" mt={{ base: "12", sm: "16", md: "16" }}>
@@ -287,17 +282,20 @@ export default function HomePage({ posts }) {
               Languages
             </Heading>
             <List>
-              <ListItem color={useColorModeValue("gray", "gray")} mt={4}>
-                JavaScript (ES6)
-              </ListItem>
-              <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
-                TypeScript
-              </ListItem>
               <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
                 HTML
               </ListItem>
               <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
                 CSS/Sass
+              </ListItem>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={4}>
+                JavaScript (ES6)
+              </ListItem>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
+                Chakra UI
+              </ListItem>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
+                TailwindCSS
               </ListItem>
             </List>
           </VStack>
@@ -314,9 +312,6 @@ export default function HomePage({ posts }) {
               </ListItem>
               <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
                 GatsbyJS
-              </ListItem>
-              <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
-                Vue
               </ListItem>
             </List>
           </VStack>
@@ -343,9 +338,6 @@ export default function HomePage({ posts }) {
             <List>
               <ListItem color={useColorModeValue("gray", "gray")} mt={4}>
                 Figma
-              </ListItem>
-              <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
-                Adobe XD
               </ListItem>
             </List>
           </VStack>
