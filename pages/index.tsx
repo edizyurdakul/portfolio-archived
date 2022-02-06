@@ -20,6 +20,7 @@ import {
   ListItem,
   Badge,
   useColorModeValue,
+  VisuallyHidden,
 } from "@chakra-ui/react";
 
 export default function HomePage({ posts }) {
@@ -93,32 +94,37 @@ export default function HomePage({ posts }) {
             fontSize="md"
             color={useColorModeValue("gray.600", "gray.400")}
           >
-            I’m a front-end developer specializing in building (and occasionally
-            designing) outstanding digital products.
+            I’m a front-end developer using modern technologies such as React,
+            Next.JS , Gatsby.JS, and more. Proficient in a wide range of
+            development and testing tools as well as version control tools. A
+            continuous learner, keeping up with new technologies and changes to
+            languages and frameworks such as React 17, Next. JS 12.
           </Box>
 
           <NextLink href="/resume.pdf">
-            <Button isDisabled mt={5} w="fit-content" size="md">
+            <Button mt={5} w="fit-content" size="md">
               Resume
             </Button>
           </NextLink>
         </Box>
-        <Image
-          mb={{ base: "8", md: "0" }}
-          borderRadius="full"
-          boxSize="150px"
-          src="https://avatars.githubusercontent.com/u/53665610?v=4"
-          alt="Ediz Yurdakul"
-        />
+        <VisuallyHidden>
+          <Image
+            mb={{ base: "8", md: "0" }}
+            borderRadius="full"
+            boxSize="150px"
+            src="https://avatars.githubusercontent.com/u/53665610?v=4"
+            alt="Ediz Yurdakul"
+          />
+        </VisuallyHidden>
       </Box>
       <Box as="section" mt={{ base: "12", sm: "16", md: "16" }}>
         <Heading as="h2" fontSize="2xl" mb={8}>
           About Me
         </Heading>
         <Text color={useColorModeValue("gray.600", "gray.400")} as="p">
-          Hello! My name is Ediz and I enjoy building things for the web.
-          Currently improving and learning NextJS, Chakra-UI, Typescript,
-          Prisma, Fauna, GraphQL, and Apollo 3.
+          Hello! an other Frontend Developer based in Cape Town, South Africa
+          specialized in front end development. Currently improving and learning
+          NextJS, Chakra-UI, TailwindCSS, Fauna, GraphQL, and Apollo 3.
         </Text>
       </Box>
       <Box as="section" mt={{ base: "12", sm: "16", md: "16" }}>
