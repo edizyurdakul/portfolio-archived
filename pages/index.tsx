@@ -288,7 +288,7 @@ export default function HomePage({ posts }) {
               <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
                 CSS/Sass
               </ListItem>
-              <ListItem color={useColorModeValue("gray", "gray")} mt={4}>
+              <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
                 JavaScript (ES6)
               </ListItem>
               <ListItem color={useColorModeValue("gray", "gray")} mt={2}>
