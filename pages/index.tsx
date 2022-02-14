@@ -12,7 +12,6 @@ import {
   Link,
   IconButton,
   Tooltip,
-  Image,
   Button,
   Heading,
   Text,
@@ -20,7 +19,6 @@ import {
   ListItem,
   Badge,
   useColorModeValue,
-  VisuallyHidden,
 } from "@chakra-ui/react";
 
 export default function HomePage({ posts }) {
@@ -107,15 +105,6 @@ export default function HomePage({ posts }) {
             </Button>
           </NextLink>
         </Box>
-        <VisuallyHidden>
-          <Image
-            mb={{ base: "8", md: "0" }}
-            borderRadius="full"
-            boxSize="150px"
-            src="https://avatars.githubusercontent.com/u/53665610?v=4"
-            alt="Ediz Yurdakul"
-          />
-        </VisuallyHidden>
       </Box>
       <Box as="section" mt={{ base: "12", sm: "16", md: "16" }}>
         <Heading as="h2" fontSize="2xl" mb={8}>
@@ -558,17 +547,17 @@ export default function HomePage({ posts }) {
               </NextLink>
  */
 
-export function getStaticProps() {
-  const posts = postFilePaths.map((filePath) => {
-    const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
-    const { content, data } = matter(source);
+// export function getStaticProps() {
+//   const posts = postFilePaths.map((filePath) => {
+//     const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
+//     const { content, data } = matter(source);
 
-    return {
-      content,
-      data,
-      filePath,
-    };
-  });
+//     return {
+//       content,
+//       data,
+//       filePath,
+//     };
+//   });
 
-  return { props: { posts } };
-}
+//   return { props: { posts } };
+// }
