@@ -92,11 +92,12 @@ export default function HomePage({ posts }) {
             fontSize="md"
             color={useColorModeValue("gray.600", "gray.400")}
           >
-            I’m a front-end developer using modern technologies such as React,
-            Next.JS , Gatsby.JS, and more. Proficient in a wide range of
-            development and testing tools as well as version control tools. A
+            Hello! I’m a frontend developer based in Cape Town, South Africa
+            specialized in front end development. using modern technologies such
+            as React, Next.JS , Gatsby.JS, and more. Proficient in a wide range
+            of development and testing tools as well as version control tools. A
             continuous learner, keeping up with new technologies and changes to
-            languages and frameworks such as React 17, Next. JS 12.
+            languages and frameworks such as React 18, Next. JS 12.
           </Box>
 
           <NextLink href="/resume.pdf">
@@ -105,16 +106,6 @@ export default function HomePage({ posts }) {
             </Button>
           </NextLink>
         </Box>
-      </Box>
-      <Box as="section" mt={{ base: "12", sm: "16", md: "16" }}>
-        <Heading as="h2" fontSize="2xl" mb={8}>
-          About Me
-        </Heading>
-        <Text color={useColorModeValue("gray.600", "gray.400")} as="p">
-          Hello! an other Frontend Developer based in Cape Town, South Africa
-          specialized in front end development. Currently improving and learning
-          NextJS, Chakra-UI, TailwindCSS, Fauna, GraphQL, and Apollo 3.
-        </Text>
       </Box>
       <Box as="section" mt={{ base: "12", sm: "16", md: "16" }}>
         <Heading as="h2" fontSize="2xl" mb={8}>
