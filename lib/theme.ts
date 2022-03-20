@@ -14,6 +14,10 @@ const theme = extendTheme({
         color: mode("gray.800", "whiteAlpha.900")(props),
         bg: mode("whiteAlpha.800", "gray.800")(props),
       },
+      _selection: {
+        bg: "yellow",
+        color: "blue",
+      },
     }),
   },
 });
